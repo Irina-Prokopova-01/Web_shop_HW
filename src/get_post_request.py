@@ -15,6 +15,7 @@ class MyServer(BaseHTTPRequestHandler):
         self.end_headers()
         with open("../html/contacts.html", encoding="utf-8") as file:
             content = file.read()
+        print(content)
         self.wfile.write(bytes(content, "utf-8"))
 
     def do_POST(self):
